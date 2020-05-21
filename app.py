@@ -43,7 +43,7 @@ def blog():
     if request.method == 'POST':
         post = request.form.get('post')
         session['posts'].append(post)
-    return render_template('blog.html', posts=session)
+    return render_template('blog.html', posts=session['posts'])
 
 
 @app.route('/blog/<int:id>')
