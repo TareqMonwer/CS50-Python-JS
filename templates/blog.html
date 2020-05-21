@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<h1>All Posts</h1>
+
+<ul>
+  {% for post in posts %}
+    <li>{{posts}}</li>
+  {% endfor %}
+</ul>
+
+<hr>
+<h3>Contact me</h3>
+<form class="contact-form" action="{{url_for('blog')}}" method="post">
+  <textarea name="post" rows="8" cols="80"></textarea>
+  <input type="submit" value="Post">
+</form>
+{% endblock %}

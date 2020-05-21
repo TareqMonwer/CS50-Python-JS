@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 from flask_session import Session
 
 
@@ -35,9 +35,15 @@ def about():
     return render_template('me.html', categories=categories)
 
 
-@app.route('/blog')
+@app.route('/blog', methods=['GET','POST'])
 def blog():
-    return "My personal blog"
+    if session.get('posts') is None:
+        session['posts'] = []
+
+    if request.method == 'POST':
+        post = request.form.get('post')
+        session['posts'].append(post)
+    return render_template('blog.html', posts=session)
 
 
 @app.route('/blog/<int:id>')
