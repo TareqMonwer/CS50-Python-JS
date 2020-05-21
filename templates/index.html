@@ -4,4 +4,10 @@
 <h2>Recent Post From Blog</h2>
 <hr>
 <h4>{{ recent_post }}</h4>
+<hr>
+<h3>Add New Category</h3>
+<form class="" action="{{url_for('index')}}" method="post">
+  <input type="text" name="category">
+  <input type="submit" value="Add">
+</form>
 {% endblock %}
