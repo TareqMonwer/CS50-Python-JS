@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tareq Monwer</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/">Home</a>
+      {% for category in categories %}
+        <a href="#">{{category}}</a>
+      {% endfor %}
+      <a href="{{url_for('about')}}">About me</a>
+    </nav>
+
+    <div class="main">
+      {% block main %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
