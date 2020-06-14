@@ -3,3 +3,9 @@ Lib/
 Scripts/
 tcl/
 LICENSE.txt
+flask_session/
+.vscode/
+.pytest_cache/
+__pycache__/
+
+.env
