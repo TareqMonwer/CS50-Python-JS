@@ -45,7 +45,7 @@ Pillow==8.1.1
 pluggy==0.13.1
 protobuf==3.0.0
 psycopg2-binary==2.8.5
-py==1.8.1
+py==1.10.0
 pycairo==1.16.2
 pycrypto==2.6.1
 pycups==1.9.73
